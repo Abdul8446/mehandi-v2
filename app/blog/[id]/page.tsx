@@ -17,8 +17,11 @@ interface BlogPost {
   author: string;
 }
 
+// Define valid IDs as a type
+type BlogPostId = '1' | '2' | '3';
+
 // This would typically come from an API or CMS
-const blogPosts = {
+const blogPosts: Record<BlogPostId, BlogPost> = {
   '1': {
     title: 'The History and Significance of Mehandi in Indian Weddings',
     excerpt: 'Explore the cultural significance and evolution of bridal mehandi traditions across different regions of India.',
@@ -101,11 +104,11 @@ const blogPosts = {
 
 const BlogPost = () => {
   const params = useParams();
-  const id = params.id as string;
+  const id = params.id as BlogPostId;
   const post = blogPosts[id] || blogPosts['1']; // Default to first post if ID not found
 
   return (
-    <>   
+    <>                
       <Head>
         <title>{post.title} | Mehndi Insights</title>
         <meta name="description" content={post.excerpt} />
