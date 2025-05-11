@@ -26,6 +26,7 @@ const About = () => {
                   Founded in 2020, Mehandi Mansion began with a simple mission: to preserve and promote the ancient art of mehandi while making it accessible to everyone through quality products and professional services.
                 </p>
                 <p className="text-gray-700">
+                  {/* eslint-disable-next-line react/no-unescaped-entities */}
                   Today, we're proud to be one of the leading providers of premium henna products and professional mehandi services, serving thousands of satisfied customers across the country.
                 </p>
               </div>

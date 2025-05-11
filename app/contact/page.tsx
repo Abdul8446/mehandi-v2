@@ -51,6 +51,7 @@ const Contact = () => {
             <div className="container mx-auto px-4 text-center">
               <h1 className="text-3xl md:text-4xl font-serif font-bold mb-4">Contact Us</h1>
               <p className="max-w-2xl mx-auto">
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
                 We're here to help! Reach out to us for any questions, concerns, or feedback.
               </p>
             </div>

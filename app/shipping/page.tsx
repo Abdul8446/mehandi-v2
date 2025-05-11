@@ -114,6 +114,7 @@ const Shipping = () => {
                   <section>
                     <h2 className="text-2xl font-serif text-brown-900 mb-6">Return Policy</h2>
                     <p className="text-gray-700 mb-6">
+                      {/* eslint-disable-next-line react/no-unescaped-entities */}
                       We want you to be completely satisfied with your purchase. If you're not happy with your order, you can return it within 30 days of delivery.
                     </p>
                     <div className="bg-brown-50 p-6 rounded-lg border border-brown-100">

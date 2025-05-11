@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react';
+// import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Header from '../../components/Header';
@@ -10,7 +10,7 @@ import Button from '../../components/ui/Button';
 import { Calendar, Clock, Users, BookOpen, Award, Star } from 'lucide-react';
 
 const Classes = () => {
-  const [activeTab, setActiveTab] = useState('all');
+  // const [activeTab, setActiveTab] = useState('all');
 
   const courses = [
     {

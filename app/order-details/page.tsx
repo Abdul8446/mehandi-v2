@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import AnimatedSection from '../../components/AnimatedSection';
-import { Package, Truck, CheckCircle } from 'lucide-react';
+import { Package, CheckCircle } from 'lucide-react';
 
 interface OrderItem {
   name: string;

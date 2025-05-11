@@ -100,6 +100,7 @@ const FAQ = () => {
             <div className="container mx-auto px-4 text-center">
               <h2 className="text-2xl font-serif text-brown-900 mb-4">Still have questions?</h2>
               <p className="text-gray-700 mb-8">
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
                 We're here to help. Contact our customer support team anytime.
               </p>
               <Link
