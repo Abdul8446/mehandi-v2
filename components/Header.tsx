@@ -1,10 +1,12 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ShoppingCart, Search, Menu, X, User } from 'lucide-react';
+import { ShoppingCart, Search, Menu, X, User, Heart } from 'lucide-react';
 import Button from './ui/Button';
 import { NavigationItem } from '../types';
 import Link from 'next/link';
+import { useAuth } from '@/contexts/AuthContext';
+import { useCart } from '@/contexts/CartContext';
 
 const navigation: NavigationItem[] = [
   { title: 'Home', href: '/' },
@@ -20,6 +22,8 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [cartCount, setCartCount] = useState(0);
+  const { isAuthenticated, user, logout } = useAuth();
+  const { totalItems } = useCart();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,22 +60,34 @@ const Header = () => {
 
           {/* Right Actions */}
           <div className="flex items-center space-x-4">
-            {[Search, User].map((Icon, i) => (
+            {/* {[Search, User].map((Icon, i) => (
               <button key={i} className={`p-1 rounded-full ${navTextColor}`}>
                 <Icon size={20} />
               </button>
-            ))}
+            ))} */}
 
-            <div className="relative">
-              <button className={`p-1 rounded-full ${navTextColor}`}>
+            <div className="relative p-2 hover:bg-gray-100 rounded-full">
+              {/* <button className={`p-1 rounded-full ${navTextColor}`}>
                 <ShoppingCart size={20} />
               </button>
               {cartCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-brown-700 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   {cartCount}
                 </span>
-              )}
+              )} */}
+              <Link href="/cart" >
+                <ShoppingCart size={20}/>
+              </Link>
+                {totalItems > 0 && (
+                  <span className="absolute -top-2 -right-1 bg-red-900 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                    {totalItems}
+                  </span>
+                )}
             </div>
+
+            <Link href="/wishlist" className="p-2 hover:bg-gray-100 rounded-full">
+                <Heart size={20} />
+            </Link>
 
             <div className="hidden md:block">
               <Button variant="primary" size="sm">

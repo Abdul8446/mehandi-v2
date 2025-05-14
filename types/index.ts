@@ -1,13 +1,28 @@
-export interface Product {
-    id: string;
+// export interface Product {
+//     id: string;
+//     name: string;
+//     price: number;
+//     image: string;
+//     category: string;
+//     description: string;
+//     isNew?: boolean;
+//     isFeatured?: boolean;
+//   }
+
+  export interface Product {
+    _id: string;
     name: string;
     price: number;
+    originalPrice?: number;
     image: string;
     category: string;
     description: string;
-    isNew?: boolean;
+    rating?: number;
+    reviews?: number;
     isFeatured?: boolean;
-  }
+    isNew?: boolean;
+    inStock?: boolean;
+  };
   
   export interface BookingSlot {
     id: string;

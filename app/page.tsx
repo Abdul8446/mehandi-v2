@@ -10,7 +10,7 @@ import CategorySection from '../components/CategorySection';
 import FeaturedProducts from '../components/FeaturedProducts';
 import ArtistShowcase from '../components/ArtistShowcase';
 import TestimonialSection from '../components/TestimonialSection';
-import BlogSection from '../components/BlogSection';
+// import BlogSection from '../components/BlogSection';
 
 export default function HomePage() {
   return (
@@ -24,7 +24,7 @@ export default function HomePage() {
         <FeaturedProducts />
         <ArtistShowcase />
         <TestimonialSection />
-        <BlogSection />
+        {/* <BlogSection /> */}
       </main>
       <Footer />
     </div>
